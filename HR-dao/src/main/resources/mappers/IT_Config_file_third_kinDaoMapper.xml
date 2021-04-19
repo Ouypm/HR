@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--这是t_emp表的映射文件-->
+<!--一个表对应一个映射文件-->
+<!--namespace指定dao接口，让映射文件和dao一一对应-->
+<mapper namespace="com.ck.dao.IT_Config_file_third_kindDao">
+
+    <resultMap id="IT_Config_file_third_kindDao" type="com.ck.entity.T_Config_file_third_kind">
+        <result column="ftk_id" property="ftk_id"></result>
+        <result column="first_kind_id" property="first_kind_id"></result>
+        <result column="first_kind_name" property="first_kind_name"></result>
+        <result column="second_kind_id" property="second_kind_id"></result>
+        <result column="second_kind_name" property="second_kind_name"></result>
+        <result column="third_kind_id" property="third_kind_id"></result>
+        <result column="third_kind_name" property="third_kind_name"></result>
+        <result column="third_kind_sale_id" property="third_kind_sale_id"></result>
+        <result column="third_kind_is_retail" property="third_kind_is_retail"></result>
+    </resultMap>
+
+    <resultMap id="file_third_kindDao" type="com.ck.entity.T_Config_file_third_kind">
+        <result column="third_kind_id" property="third_kind_id"></result>
+        <result column="third_kind_name" property="third_kind_name"></result>
+    </resultMap>
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--这是t_emp表的映射文件-->
+<!--一个表对应一个映射文件-->
+<!--namespace指定dao接口，让映射文件和dao一一对应-->
+<mapper namespace="com.ck.dao.IT_Config_file_second_kindDao">
+
+    <resultMap id="IT_Config_file_second_kindDao" type="com.ck.entity.T_Config_file_second_kind">
+        <result column="fsk_id" property="fsk_id"></result>
+        <result column="first_kind_id" property="first_kind_id"></result>
+        <result column="first_kind_name" property="first_kind_name"></result>
+        <result column="second_kind_id" property="second_kind_id"></result>
+        <result column="second_kind_name" property="second_kind_name"></result>
+        <result column="second_salary_id" property="second_salary_id"></result>
+        <result column="second_sale_id" property="second_sale_id"></result>
+    </resultMap>
+
+    <resultMap id="file_second_kindDao" type="com.ck.entity.T_Config_file_second_kind">
+        <result column="second_kind_id" property="second_kind_id"></result>
+        <result column="second_kind_name" property="second_kind_name"></result>
+    </resultMap>
+</mapper>

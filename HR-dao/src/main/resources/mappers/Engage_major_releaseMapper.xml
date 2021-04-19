@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--这是t_emp表的映射文件-->
+<!--一个表对应一个映射文件-->
+<!--namespace指定dao接口，让映射文件和dao一一对应-->
+<mapper namespace="com.ck.dao.IEngage_major_releaseDao">
+    <resultMap id="Engage_major_releaseMap" type="com.ck.entity.Engage_major_release">
+        <collection property="" resultMap="" column="">
+
+        </collection>
+    </resultMap>
+</mapper>
