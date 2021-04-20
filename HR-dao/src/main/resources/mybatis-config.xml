@@ -22,7 +22,7 @@
     </plugins>
 
     <mappers>
-        <mapper resource="mappers/IEngage_major_releaseDao"/>
+        <mapper resource="mappers/Engage_major_releaseMapper.xml"/>
         <mapper resource="mappers/HumanResourceMapper.xml"></mapper>
         <mapper resource="mappers/ConfigPublicMapper.xml"></mapper>
         <mapper resource="mappers/IT_ConfigfilefirstkindDaoMapper.xml"/>
