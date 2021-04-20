@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Description:
@@ -29,5 +30,8 @@ public interface IHumanResourceDao {
     //复核修改人力资源
     @Update("update t_HumanFile_dig set ")
     public void updateHumanResource(T_HumanFile_dig THumanFile_dig);
+
+    /* 多重查询   调动 */
+    public List<T_HumanFile_dig> queHumanResourceMapperDuoch(Map map);
 
 }

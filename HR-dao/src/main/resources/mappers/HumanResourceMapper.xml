@@ -5,4 +5,26 @@
     <resultMap id="queHumanResourceMapper" type="com.ck.entity.T_HumanFile_dig">
 
     </resultMap>
+
+    <select id="queHumanResourceMapperDuoch" parameterType="java.util.Map" resultMap="queHumanResourceMapper">
+        select * from t_HumanFile_dig
+        <where>
+            <if test="first_kind_id!=0 and !''.equals(first_kind_id)">
+                and first_kind_id = #{first_kind_id}
+                <if test="second_kind_id!=0 and !''.equals(second_kind_id)">
+                    and second_kind_id = #{second_kind_id}
+                    <if test="third_kind_id!=0 and !''.equals(third_kind_id)">
+                        and third_kind_id = #{third_kind_id}
+                    </if>
+                </if>
+            </if>
+
+            <if test="regist_timestart!= null and !''.equals(regist_timestart) and regist_timeend!= null and !''.equals(regist_timeend)">
+                and regist_time between #{regist_timestart} and  #{regist_timeend}
+            </if>
+            <if test="regist_timestart!= null and !''.equals(regist_timestart) and regist_timeend= null or ''.equals(regist_timeend)">
+                and regist_time between #{regist_timestart} and NOW()
+            </if>
+        </where>
+    </select>
 </mapper>

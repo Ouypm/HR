@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Description:
@@ -37,7 +38,11 @@ public class IHumanResourceServiceImpl implements IHumanResourceService {
         iHumanResourceDao.updateHumanResource(THumanFile_dig);
     }
 
-
+    /* 多重查询   调动 */
+    public List<T_HumanFile_dig> queHumanResourceMapperDuoch(Map map) {
+        // 返回多重查询的结果集
+        return iHumanResourceDao.queHumanResourceMapperDuoch(map);
+    }
 
 
 }
