@@ -16,4 +16,7 @@ import java.util.List;
 public interface IT_Config_file_third_kindService {
     /* 根据二级机构编号查询三级机构的数据 */
     public List<T_Config_file_third_kind> SecondIdQueryAll(int sid);
+
+    /* 三级机构根据id查询名字 */
+    public T_Config_file_third_kind thirdqueryById(int tid);
 }

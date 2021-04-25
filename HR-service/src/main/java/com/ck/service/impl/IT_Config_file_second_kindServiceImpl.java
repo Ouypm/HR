@@ -23,7 +23,11 @@ public class IT_Config_file_second_kindServiceImpl implements IT_Config_file_sec
 
     /* 根据一级机构的编号查询二级机构的数据 */
     public List<T_Config_file_second_kind> FistIdQueryAll(int fid) {
-        System.out.println(fid);
         return it_config_file_second_kindDao.FistIdQueryAll(fid);
     }
+
+    /* 根据二级机构的编号查询名字 */
+    public T_Config_file_second_kind secondqeruyById(int sid){
+        return it_config_file_second_kindDao.secondqeruyById(sid);
+    };
 }

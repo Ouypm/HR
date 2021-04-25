@@ -14,7 +14,12 @@ import java.util.List;
 public interface IConfig_majorDao {
 
     //根据职位分类编号查询
-    @Select("select * from t_config_major where major_kind_id = #{cid}")
+    @Select("select * from t_Config_major where major_kind_id = #{cid}")
     @ResultMap("queConfigMajor")
     public List<Config_major> queConfigMajorAll(int cid);
+
+    //根据职位分类编号查询
+    @Select("select major_name from t_Config_major where major_id = #{kid}")
+    @ResultMap("queConfigMajor")
+    public Config_major majorqueryById(int kid);
 }

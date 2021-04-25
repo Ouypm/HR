@@ -4,6 +4,7 @@ import com.ck.entity.T_Config_file_first_kind;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 
+import javax.faces.annotation.RequestMap;
 import java.util.List;
 
 /**
@@ -18,4 +19,9 @@ public interface IT_ConfigfilefirstkindDao {
     @Select("SELECT * FROM t_Config_file_first_kind")
     @ResultMap("IT_Configfilefirstkind")
     public List<T_Config_file_first_kind> firstqueryAll();
+
+    /* 根据id查询一级机构的一级名称 */
+    @Select("select first_kind_name from t_Config_file_first_kind where first_kind_id=#{fid}")
+    @ResultMap("IT_Configfilefirstkind")
+    public T_Config_file_first_kind fistqueryById(int fid);
 }

@@ -29,13 +29,13 @@ public class Major_change {
     private String human_name;//	姓名
     private int  salary_standard_id	;//	薪酬标准编号(外健：salary_standard_details表中standard_id)
     private String salary_standard_name	;//	薪酬标准名称
-    private int salary_sum	;//	薪酬总额
+    private double salary_sum	;//	薪酬总额
     private int  new_salary_standard_id	;//	新薪酬标准编号(外健：salary_standard_details表中standard_id)
     private String new_salary_standard_name	;//	新薪酬标准名称
     private double new_salary_sum	;//	新薪酬总额
     private String change_reason;//	string	调动原因
     private String check_reason;//	审核通过意见
-    private int  check_status	;//	复核通过状态
+    private int  check_status	;//	复核通过状态   0为未审核   1为通过   2为未通过
     private String register;//		登记人
     private String checker;//		复核人
     private String regist_time;//	date	登记时间
@@ -244,11 +244,11 @@ public class Major_change {
   this.salary_standard_name = salary_standard_name;
  }
 
- public int getSalary_sum() {
+ public double getSalary_sum() {
   return salary_sum;
  }
 
- public void setSalary_sum(int salary_sum) {
+ public void setSalary_sum(double salary_sum) {
   this.salary_sum = salary_sum;
  }
 
@@ -332,7 +332,7 @@ public class Major_change {
   this.check_time = check_time;
  }
 
- public Major_change(int mch_id, int first_kind_id, String first_kind_name, int second_kind_id, String second_kind_name, int third_kind_id, String third_kind_name, int major_kind_id, String major_kind_name, int major_id, String major_name, int new_first_kind_id, String new_first_kind_name, int new_second_kind_id, String new_second_kind_name, int new_third_kind_id, String new_third_kind_name, int new_major_kind_id, String new_major_kind_name, int new_major_id, String new_major_name, int human_id, String human_name, int salary_standard_id, String salary_standard_name, int salary_sum, int new_salary_standard_id, String new_salary_standard_name, double new_salary_sum, String change_reason, String check_reason, int check_status, String register, String checker, String regist_time, String check_time) {
+ public Major_change(int mch_id, int first_kind_id, String first_kind_name, int second_kind_id, String second_kind_name, int third_kind_id, String third_kind_name, int major_kind_id, String major_kind_name, int major_id, String major_name, int new_first_kind_id, String new_first_kind_name, int new_second_kind_id, String new_second_kind_name, int new_third_kind_id, String new_third_kind_name, int new_major_kind_id, String new_major_kind_name, int new_major_id, String new_major_name, int human_id, String human_name, int salary_standard_id, String salary_standard_name, double salary_sum, int new_salary_standard_id, String new_salary_standard_name, double new_salary_sum, String change_reason, String check_reason, int check_status, String register, String checker, String regist_time, String check_time) {
   this.mch_id = mch_id;
   this.first_kind_id = first_kind_id;
   this.first_kind_name = first_kind_name;

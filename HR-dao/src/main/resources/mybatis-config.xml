@@ -22,6 +22,7 @@
     </plugins>
 
     <mappers>
+        <mapper resource="mappers/MajorchangeMapper.xml"></mapper>
         <mapper resource="mappers/Config_major_kindMapper.xml"></mapper>
         <mapper resource="mappers/Config_majorMapper.xml"></mapper>
         <mapper resource="mappers/Engage_major_releaseMapper.xml"/>

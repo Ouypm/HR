@@ -25,4 +25,9 @@ public class IT_ConfigfilefirstkindServiceImpl implements IT_Configfilefirstkind
     public List<T_Config_file_first_kind> firstqueryAll() {
         return it_configfilefirstkindDao.firstqueryAll();
     }
+
+    /* 根据id查询一级机构的一级名称 */
+    public T_Config_file_first_kind fistqueryById(int fid){
+        return it_configfilefirstkindDao.fistqueryById(fid);
+    };
 }

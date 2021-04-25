@@ -25,4 +25,9 @@ public class IT_Config_file_third_kindServiceImpl implements IT_Config_file_thir
     public List<T_Config_file_third_kind> SecondIdQueryAll(int sid) {
         return it_config_file_third_kindDao.SecondIdQueryAll(sid);
     }
+
+    /* 三级机构根据id查询名字 */
+    public T_Config_file_third_kind thirdqueryById(int tid){
+        return it_config_file_third_kindDao.thirdqueryById(tid);
+    };
 }

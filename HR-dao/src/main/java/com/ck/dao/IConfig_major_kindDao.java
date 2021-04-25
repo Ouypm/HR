@@ -20,4 +20,9 @@ public interface IConfig_major_kindDao {
     @ResultMap("queConfigMajorKind")
     public List<Config_major_kind> queConfigMajorKindAll();
 
+    /* 职业分类表根据id查询 */
+    @Select("select major_kind_name from t_Config_major_kind where major_kind_id=#{mid}")
+    @ResultMap("queConfigMajorKind")
+    public Config_major_kind major_kindqueryById(int mid);
+
 }

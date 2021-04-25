@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ck.dao.IHumanResourceDao">
-
-    <resultMap id="queHumanResourceMapper" type="com.ck.entity.T_HumanFile_dig">
+<mapper namespace="com.ck.dao.IMajor_changeDao">
+    <resultMap id="majorchangeAll" type="com.ck.entity.Major_change">
 
     </resultMap>
 
-    <select id="queHumanResourceMapperDuoch" parameterType="java.util.Map" resultMap="queHumanResourceMapper">
-        select * from t_HumanFile_dig
+    <select id="Major_changeDquery" parameterType="java.util.Map" resultMap="majorchangeAll">
+        SELECT * FROM t_Major_change
         <where>
-            <if test="first_kind_id!=0 and !''.equals(first_kind_id)">
+            <if test="first_kind_id!=0 and first_kind_id!=''">
                 and first_kind_id = #{first_kind_id}
-                <if test="second_kind_id!=0 and !''.equals(second_kind_id)">
+                <if test="second_kind_id!=0 and second_kind_id!=''">
                     and second_kind_id = #{second_kind_id}
-                    <if test="third_kind_id!=0 and !''.equals(third_kind_id)">
+                    <if test="third_kind_id!=0 and third_kind_id!=''">
                         and third_kind_id = #{third_kind_id}
                     </if>
                 </if>
+            </if>
+            <if test="major_kind_id!=0 and major_kind_id!=''">
+                 and major_kind_id = #{major_kind_id}
+                 <if test="major_id!=0 and major_id!=''">
+                     and major_id = #{major_id}
+                 </if>
             </if>
 
             <if test="regist_timestart!= null and regist_timestart!=''">

@@ -25,4 +25,9 @@ public class IConfig_major_kindServiceImpl implements IConfig_major_kindService 
     public List<Config_major_kind> queConfigMajorKindAll() {
         return iConfig_major_kindDao.queConfigMajorKindAll();
     }
+
+    /* 职业分类表根据id查询 */
+    public Config_major_kind major_kindqueryById(int mid){
+        return iConfig_major_kindDao.major_kindqueryById(mid);
+    };
 }
